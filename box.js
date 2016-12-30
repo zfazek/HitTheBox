@@ -18,11 +18,7 @@ function setup() {
 }
 
 function addRect() {
-    var size = random(40, 80);
-    rects.push(new Rect(random(size, width - size),
-                random(size, height - size),
-                random(255),
-                size));
+    rects.push(new Rect());
 }
 
 function draw() {

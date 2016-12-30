@@ -1,10 +1,10 @@
-function Rect(x, y, colour, size) {
-    this.x = x;
-    this.y = y;
-    this.colour = colour;
-    this.size = size;
-    this.dx = random(1, 5);
-    this.dy = random(1, 5);
+function Rect() {
+    this.size = random(40, 80);
+    this.x = random(this.size, WIDTH - this.size);
+    this.y = random(this.size, HEIGHT - this.size);
+    this.colour = random(255);
+    this.dx = random(-5, 5);
+    this.dy = random(-5, 5);
 
     this.update = function() {
         this.x += this.dx;
@@ -25,7 +25,11 @@ function Rect(x, y, colour, size) {
     }
 
     this.draw = function() {
-        stroke(255 - this.colour);
+        if (this.colour < 127) {
+            stroke(255);
+        } else {
+            stroke(0);
+        }
         strokeWeight(2);
         fill(this.colour);
         rect(this.x, this.y, this.size, this.size);
