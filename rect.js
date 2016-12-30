@@ -20,7 +20,7 @@ function Rect() {
             this.y = 0;
         } else if (this.y + this.size > HEIGHT) {
             this.dy *= -1;
-            y = HEIGHT - this.size;
+            this.y = HEIGHT - this.size;
         }
     }
 
