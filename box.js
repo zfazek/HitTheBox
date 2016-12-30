@@ -5,7 +5,8 @@ var result;
 var myCanvas;
 
 var rects = [];
-var N = 10;
+var N = 20;
+var M = 4;
 
 function setup() {
     result = select('#result');
@@ -47,6 +48,8 @@ function mousePressed() {
         }
     }
     if (!hit) {
-        addRect();
+        for (var j = 0; j < M; j++) {
+          addRect();
+        }
     }
 }
