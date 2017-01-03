@@ -11,6 +11,7 @@ var M = 4;
 function setup() {
     result = select('#result');
     var myCanvas = createCanvas(WIDTH, HEIGHT);
+    myCanvas.mousePressed(mousePressedOnCanvas);
     myCanvas.parent('myCanvas');
     for (var i = 0; i < N; i++) {
         addRect();
@@ -31,7 +32,7 @@ function draw() {
     }
 }
 
-function mousePressed() {
+function mousePressedOnCanvas() {
     var hit = false;
     for (var i = rects.length - 1; i >= 0; i--) {
         var rect = rects[i];
