@@ -1,10 +1,10 @@
 function Rect() {
-    this.size = random(40, 80);
-    this.x = random(this.size, WIDTH - this.size);
-    this.y = random(this.size, HEIGHT - this.size);
+    this.size = random(70, 100);
+    this.x = random(0, WIDTH - this.size);
+    this.y = random(0, HEIGHT - this.size);
     this.colour = random(255);
-    this.dx = random(-5, 5);
-    this.dy = random(-5, 5);
+    this.dx = random(-3, 3);
+    this.dy = random(-3, 3);
 
     this.update = function() {
         this.x += this.dx;
